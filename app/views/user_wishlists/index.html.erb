@@ -1,0 +1,21 @@
+<h1>Listing user_wishlists</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @user_wishlists.each do |user_wishlist| %>
+  <tr>
+    <td><%= link_to 'Show', user_wishlist %></td>
+    <td><%= link_to 'Edit', edit_user_wishlist_path(user_wishlist) %></td>
+    <td><%= link_to 'Destroy', user_wishlist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User wishlist', new_user_wishlist_path %>
